@@ -1,11 +1,5 @@
----
-title: "ReadMe"
-output: html_document
----
-
-
 ####Data using in the script
-This section present used data file in the script Unused files is obmitted.
+This section present used data file in the script. Unused files is obmitted.
 
 ```
 UCI HAR Dataset:.
