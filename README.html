@@ -156,7 +156,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 <div id="make-tidy-data" class="section level5">
 <h5>Make tidy data</h5>
-<p>All feature variables are normalized, range in [-1,1] and unit-free. Therefore, we could combine all faeture vectors into 1 vector. On the other hand, there is not any specific requirement for this tidy set. Long format is choosed for this data set. This tidy data set contains 4 columns: - subject : id of the participant - activity : activity to be measured - feature : feature to be measure - mean.value : mean value feature calculate in the next step. We use “gather” function from tidyr package to tidy data set.</p>
+<p>All feature variables are normalized, floating value bounded within [-1,1] and unit-free. Therefore, we could combine all faeture vectors into 1 vector. On the other hand, there is not any specific requirement for this tidy set. Long format is choosed for this data set. This tidy data set contains 4 columns: - subject : id of the participant - activity : activity to be measured - feature : feature to be measure - mean.value : mean value feature calculate in the next step. We use “gather” function from tidyr package to tidy data set.</p>
 </div>
 </div>
 <div id="code-book" class="section level3">
@@ -181,72 +181,72 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h4>feature</h4>
 <p>Feature of the activity. There are 66 feature:</p>
 <ul>
-<li><strong>t.body.acc.mean.x </strong> mean of time domain signal of body acceleration in X axis</li>
-<li><strong>t.body.acc.mean.y </strong> mean of time domain signal of body acceleration in Y axis</li>
-<li><strong>t.body.acc.mean.z </strong> mean of time domain signal of body acceleration in Z axis</li>
-<li><strong>t.body.acc.std.x </strong> standard deviation of time domain signal of body acceleration in X axis</li>
-<li><strong>t.body.acc.std.y </strong> standard deviation of time domain signal of body acceleration in Y axis</li>
-<li><strong>t.body.acc.std.z </strong> standard deviation of time domain signal of body acceleration in Z axis</li>
-<li><strong>t.gravity.acc.mean.x </strong> mean of time domain signal of gravity acceleration in X axis</li>
-<li><strong>t.gravity.acc.mean.y </strong> mean of time domain signal of gravity acceleration in Y axis</li>
-<li><strong>t.gravity.acc.mean.z </strong> mean of time domain signal of gravity acceleration in Z axis</li>
-<li><strong>t.gravity.acc.std.x </strong> standard deviation of time domain signal of gravity acceleration in X axis</li>
-<li><strong>t.gravity.acc.std.y </strong> standard deviation of time domain signal of gravity acceleration in Y axis</li>
-<li><strong>t.gravity.acc.std.z </strong> standard deviation of time domain signal of gravity acceleration in Z axis</li>
-<li><strong>t.body.acc.jerk.mean.x </strong> mean of obtaining Jerk signal from time domain signal of body accelaration in X axis</li>
-<li><strong>t.body.acc.jerk.mean.y </strong> mean of obtaining Jerk signal from time domain signal of body accelaration in Y axis</li>
-<li><strong>t.body.acc.jerk.mean.z </strong> mean of obtaining Jerk signal from time domain signal of body accelaration in Z axis</li>
-<li><strong>t.body.acc.jerk.std.x </strong> standard deviation of obtaining Jerk signal from time domain signal of body accelaration in X axis</li>
-<li><strong>t.body.acc.jerk.std.y </strong> standard deviation of obtaining Jerk signal from time domain signal of body accelaration in X axis</li>
-<li><strong>t.body.acc.jerk.std.z </strong> standard deviation of obtaining Jerk signal from time domain signal of body accelaration in X axis</li>
-<li><strong>t.body.gyro.mean.x </strong> mean of time domain signal of body gyro in X axis</li>
-<li><strong>t.body.gyro.mean.y </strong> mean of time domain signal of body gyro in Y axis</li>
-<li><strong>t.body.gyro.mean.z </strong> mean of time domain signal of body gyro in Z axis</li>
-<li><strong>t.body.gyro.std.x </strong> standard deviation of time domain signal of body gyro in X axis</li>
-<li><strong>t.body.gyro.std.y </strong> standard deviation of time domain signal of body gyro in Y axis</li>
-<li><strong>t.body.gyro.std.z </strong> standard deviation of time domain signal of body gyro in Z axis</li>
-<li><strong>t.body.gyro.jerk.mean.x </strong> mean of obtaining Jerk signal from body gyro in X axis</li>
-<li><strong>t.body.gyro.jerk.mean.y </strong> mean of obtaining Jerk signal from body gyro in Y axis</li>
-<li><strong>t.body.gyro.jerk.mean.z </strong> mean of obtaining Jerk signal from body gyro in Z axis</li>
-<li><strong>t.body.gyro.jerk.std.x </strong> standard deviation of obtaining Jerk signal from time domain signal of body gyro in X axis</li>
-<li><strong>t.body.gyro.jerk.std.y </strong> standard deviation of obtaining Jerk signal from time domain signal of body gyro in Y axis</li>
-<li><strong>t.body.gyro.jerk.std.z </strong> standard deviation of obtaining Jerk signal from time domain signal of body gyro in Z axis</li>
-<li><strong>t.body.acc.mag.mean </strong> mean of magnitude from time domain signal of body accelaration<br /></li>
-<li><strong>t.body.acc.mag.std </strong> standard deviation of magnitude from time domain signal of body accelaration<br /></li>
-<li><strong>t.gravity.acc.mag.mean </strong> mean of magnitude from time domain signal of gravity accelaration<br /></li>
-<li><strong>t.gravity.acc.mag.std </strong> standard deviation of magnitude from time domain signal of gravity accelaration<br /></li>
-<li><strong>t.body.acc.jerk.mag.mean </strong> mean of magnitude from obtaining Jerk signal of time domain signal of gravity accelaration<br /></li>
-<li><strong>t.body.acc.jerk.mag.std </strong> standard deviation of magnitude from obtaining Jerk signal of time domain signal of gravity accelaration<br /></li>
-<li><strong>t.body.gyro.mag.mean </strong> mean of magnitude from time domain signal of body gyro</li>
-<li><strong>t.body.gyro.mag.std </strong> standard deviation of magnitude from time domain signal of body gyro</li>
-<li><strong>t.body.gyro.jerk.mag.mean </strong> mean of magnitude from obtaining Jerk signal of time domain signal of body gyro</li>
-<li><strong>t.body.gyro.jerk.mag.std </strong> standard deviation of magnitude from obtaining Jerk signal of time domain signal of body gyro<br /></li>
-<li><strong>f.body.acc.mean.x </strong> mean of frequency domain signals of body accelaration in X axis</li>
-<li><strong>f.body.acc.mean.y </strong> mean of frequency domain signals of body accelaration in Y axis</li>
-<li><strong>f.body.acc.mean.z </strong> mean of frequency domain signals of body accelaration in Z axis</li>
-<li><strong>f.body.acc.std.x </strong> standard deviation of frequency domain signals of body accelaration in X axis</li>
-<li><strong>f.body.acc.std.y </strong> standard deviation of frequency domain signals of body accelaration in Y axis</li>
-<li><strong>f.body.acc.std.z </strong> standard deviation of frequency domain signals of body accelaration in Z axis</li>
-<li><strong>f.body.acc.jerk.mean.x </strong> mean of obtaining Jerk signal from frequency domain signal of body accelaration in X axis</li>
-<li><strong>f.body.acc.jerk.mean.y </strong> mean of obtaining Jerk signal from frequency domain signal of body accelaration in Y axis</li>
-<li><strong>f.body.acc.jerk.mean.z </strong> mean of obtaining Jerk signal from frequency domain signal of body accelaration in Z axis</li>
-<li><strong>f.body.acc.jerk.std.x </strong> standard deviation of obtaining Jerk signal from frequency domain signal of body accelaration in X axis</li>
-<li><strong>f.body.acc.jerk.std.y </strong> standard deviation Jerk signal from frequency domain signal of body accelaration in Y axis</li>
-<li><strong>f.body.acc.jerk.std.z </strong> standard deviation Jerk signal from frequency domain signal of body accelaration in Z axis</li>
-<li><strong>f.body.gyro.mean.x </strong> mean of frequency domain signal of body gyro in X axis</li>
-<li><strong>f.body.gyro.mean.y </strong> mean of frequency domain signal of body gyro in Y axis</li>
-<li><strong>f.body.gyro.mean.z </strong> mean of frequency domain signal of body gyro in Z axis</li>
-<li><strong>f.body.gyro.std.x </strong> standard deviation of frequency domain signal of body gyro in X axis</li>
-<li><strong>f.body.gyro.std.y </strong> standard deviation of frequency domain signal of body gyro in Y axis</li>
-<li><strong>f.body.gyro.std.z </strong> standard deviation of frequency domain signal of body gyro in Z axis</li>
-<li><strong>f.body.acc.mag.mean </strong> mean of magnitude from frequency domain signal of body accelaration<br /></li>
-<li><strong>f.body.acc.mag.std </strong> standard deviation of magnitude from frequency domain signal of body accelaration<br /></li>
-<li><strong>f.body.acc.jerk.mag.mean </strong> mean of magnitude from obtaining Jerk signal of frequency domain signal of gravity accelaration<br /></li>
-<li><strong>f.body.acc.jerk.mag.std </strong> standard deviation of magnitude from obtaining Jerk signal of frequency domain signal of gravity accelaration<br /></li>
-<li><strong>f.body.gyro.mag.mean </strong> mean of magnitude from frequency domain signal of body gyro</li>
-<li><strong>f.body.gyro.mag.std </strong> standard deviation of magnitude from frequency domain signal of body gyro</li>
-<li><strong>f.body.gyro.jerk.mag.mean </strong> mean of magnitude from obtaining Jerk signal of frequency domain signal of body gyro</li>
-<li><strong>f.body.gyro.jerk.mag.std </strong> standard deviation of magnitude from obtaining Jerk signal of frequency domain signal of body gyro</li>
+<li><strong>t.body.acc.mean.x</strong> mean of time domain signal of body acceleration in X axis</li>
+<li><strong>t.body.acc.mean.y</strong> mean of time domain signal of body acceleration in Y axis</li>
+<li><strong>t.body.acc.mean.z</strong> mean of time domain signal of body acceleration in Z axis</li>
+<li><strong>t.body.acc.std.x</strong> standard deviation of time domain signal of body acceleration in X axis</li>
+<li><strong>t.body.acc.std.y</strong> standard deviation of time domain signal of body acceleration in Y axis</li>
+<li><strong>t.body.acc.std.z</strong> standard deviation of time domain signal of body acceleration in Z axis</li>
+<li><strong>t.gravity.acc.mean.x</strong> mean of time domain signal of gravity acceleration in X axis</li>
+<li><strong>t.gravity.acc.mean.y</strong> mean of time domain signal of gravity acceleration in Y axis</li>
+<li><strong>t.gravity.acc.mean.z</strong> mean of time domain signal of gravity acceleration in Z axis</li>
+<li><strong>t.gravity.acc.std.x</strong> standard deviation of time domain signal of gravity acceleration in X axis</li>
+<li><strong>t.gravity.acc.std.y</strong> standard deviation of time domain signal of gravity acceleration in Y axis</li>
+<li><strong>t.gravity.acc.std.z</strong> standard deviation of time domain signal of gravity acceleration in Z axis</li>
+<li><strong>t.body.acc.jerk.mean.x</strong> mean of obtaining Jerk signal from time domain signal of body accelaration in X axis</li>
+<li><strong>t.body.acc.jerk.mean.y</strong> mean of obtaining Jerk signal from time domain signal of body accelaration in Y axis</li>
+<li><strong>t.body.acc.jerk.mean.z</strong> mean of obtaining Jerk signal from time domain signal of body accelaration in Z axis</li>
+<li><strong>t.body.acc.jerk.std.x</strong> standard deviation of obtaining Jerk signal from time domain signal of body accelaration in X axis</li>
+<li><strong>t.body.acc.jerk.std.y</strong> standard deviation of obtaining Jerk signal from time domain signal of body accelaration in X axis</li>
+<li><strong>t.body.acc.jerk.std.z</strong> standard deviation of obtaining Jerk signal from time domain signal of body accelaration in X axis</li>
+<li><strong>t.body.gyro.mean.x</strong> mean of time domain signal of body gyro in X axis</li>
+<li><strong>t.body.gyro.mean.y</strong> mean of time domain signal of body gyro in Y axis</li>
+<li><strong>t.body.gyro.mean.z</strong> mean of time domain signal of body gyro in Z axis</li>
+<li><strong>t.body.gyro.std.x</strong> standard deviation of time domain signal of body gyro in X axis</li>
+<li><strong>t.body.gyro.std.y</strong> standard deviation of time domain signal of body gyro in Y axis</li>
+<li><strong>t.body.gyro.std.z</strong> standard deviation of time domain signal of body gyro in Z axis</li>
+<li><strong>t.body.gyro.jerk.mean.x</strong> mean of obtaining Jerk signal from body gyro in X axis</li>
+<li><strong>t.body.gyro.jerk.mean.y</strong> mean of obtaining Jerk signal from body gyro in Y axis</li>
+<li><strong>t.body.gyro.jerk.mean.z</strong> mean of obtaining Jerk signal from body gyro in Z axis</li>
+<li><strong>t.body.gyro.jerk.std.x</strong> standard deviation of obtaining Jerk signal from time domain signal of body gyro in X axis</li>
+<li><strong>t.body.gyro.jerk.std.y</strong> standard deviation of obtaining Jerk signal from time domain signal of body gyro in Y axis</li>
+<li><strong>t.body.gyro.jerk.std.z</strong> standard deviation of obtaining Jerk signal from time domain signal of body gyro in Z axis</li>
+<li><strong>t.body.acc.mag.mean</strong> mean of magnitude from time domain signal of body accelaration<br /></li>
+<li><strong>t.body.acc.mag.std</strong> standard deviation of magnitude from time domain signal of body accelaration<br /></li>
+<li><strong>t.gravity.acc.mag.mean</strong> mean of magnitude from time domain signal of gravity accelaration<br /></li>
+<li><strong>t.gravity.acc.mag.std</strong> standard deviation of magnitude from time domain signal of gravity accelaration<br /></li>
+<li><strong>t.body.acc.jerk.mag.mean</strong> mean of magnitude from obtaining Jerk signal of time domain signal of gravity accelaration<br /></li>
+<li><strong>t.body.acc.jerk.mag.std</strong> standard deviation of magnitude from obtaining Jerk signal of time domain signal of gravity accelaration<br /></li>
+<li><strong>t.body.gyro.mag.mean</strong> mean of magnitude from time domain signal of body gyro</li>
+<li><strong>t.body.gyro.mag.std</strong> standard deviation of magnitude from time domain signal of body gyro</li>
+<li><strong>t.body.gyro.jerk.mag.mean</strong> mean of magnitude from obtaining Jerk signal of time domain signal of body gyro</li>
+<li><strong>t.body.gyro.jerk.mag.std</strong> standard deviation of magnitude from obtaining Jerk signal of time domain signal of body gyro<br /></li>
+<li><strong>f.body.acc.mean.x</strong> mean of frequency domain signals of body accelaration in X axis</li>
+<li><strong>f.body.acc.mean.y</strong> mean of frequency domain signals of body accelaration in Y axis</li>
+<li><strong>f.body.acc.mean.z</strong> mean of frequency domain signals of body accelaration in Z axis</li>
+<li><strong>f.body.acc.std.x</strong> standard deviation of frequency domain signals of body accelaration in X axis</li>
+<li><strong>f.body.acc.std.y</strong> standard deviation of frequency domain signals of body accelaration in Y axis</li>
+<li><strong>f.body.acc.std.z</strong> standard deviation of frequency domain signals of body accelaration in Z axis</li>
+<li><strong>f.body.acc.jerk.mean.x</strong> mean of obtaining Jerk signal from frequency domain signal of body accelaration in X axis</li>
+<li><strong>f.body.acc.jerk.mean.y</strong> mean of obtaining Jerk signal from frequency domain signal of body accelaration in Y axis</li>
+<li><strong>f.body.acc.jerk.mean.z</strong> mean of obtaining Jerk signal from frequency domain signal of body accelaration in Z axis</li>
+<li><strong>f.body.acc.jerk.std.x</strong> standard deviation of obtaining Jerk signal from frequency domain signal of body accelaration in X axis</li>
+<li><strong>f.body.acc.jerk.std.y</strong> standard deviation Jerk signal from frequency domain signal of body accelaration in Y axis</li>
+<li><strong>f.body.acc.jerk.std.z</strong> standard deviation Jerk signal from frequency domain signal of body accelaration in Z axis</li>
+<li><strong>f.body.gyro.mean.x</strong> mean of frequency domain signal of body gyro in X axis</li>
+<li><strong>f.body.gyro.mean.y</strong> mean of frequency domain signal of body gyro in Y axis</li>
+<li><strong>f.body.gyro.mean.z</strong> mean of frequency domain signal of body gyro in Z axis</li>
+<li><strong>f.body.gyro.std.x</strong> standard deviation of frequency domain signal of body gyro in X axis</li>
+<li><strong>f.body.gyro.std.y</strong> standard deviation of frequency domain signal of body gyro in Y axis</li>
+<li><strong>f.body.gyro.std.z</strong> standard deviation of frequency domain signal of body gyro in Z axis</li>
+<li><strong>f.body.acc.mag.mean</strong> mean of magnitude from frequency domain signal of body accelaration<br /></li>
+<li><strong>f.body.acc.mag.std</strong> standard deviation of magnitude from frequency domain signal of body accelaration<br /></li>
+<li><strong>f.body.acc.jerk.mag.mean</strong> mean of magnitude from obtaining Jerk signal of frequency domain signal of gravity accelaration<br /></li>
+<li><strong>f.body.acc.jerk.mag.std</strong> standard deviation of magnitude from obtaining Jerk signal of frequency domain signal of gravity accelaration<br /></li>
+<li><strong>f.body.gyro.mag.mean</strong> mean of magnitude from frequency domain signal of body gyro</li>
+<li><strong>f.body.gyro.mag.std</strong> standard deviation of magnitude from frequency domain signal of body gyro</li>
+<li><strong>f.body.gyro.jerk.mag.mean</strong> mean of magnitude from obtaining Jerk signal of frequency domain signal of body gyro</li>
+<li><strong>f.body.gyro.jerk.mag.std</strong> standard deviation of magnitude from obtaining Jerk signal of frequency domain signal of body gyro</li>
 </ul>
 </div>
 <div id="mean.value" class="section level4">
