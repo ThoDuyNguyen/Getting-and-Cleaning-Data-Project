@@ -53,10 +53,6 @@ trainCombined <- cbind(trainSubject[,IDX_SUBJECT], trainActivity[,IDX_ACTIVITY],
 names(testCombined) <- names(trainCombined)
 combinedData <- rbind(testCombined, trainCombined)
 
-## Read descriptive activity names from file
-activityLabels <- read.csv(FILE_ACTIVITY, header = FALSE,sep="",
-                           stringsAsFactors = FALSE)
-
 
 ## Read the features, this will be used for features's column name
 features <- read.csv(FILE_FEATURES, header = FALSE, sep="",
