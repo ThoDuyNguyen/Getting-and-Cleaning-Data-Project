@@ -69,7 +69,7 @@ Data splits into 3 files. Before making a combined data set include test and tra
 ####Extracts only the measurements on the mean and standard deviation for each measurement
 - Read feature names from "features.txt"
 - Use grep to determine feature contains "mean()" or "std()", result stored to keptFeatures.
-- Subset combinedData, features columns are kept is defined in keptFeatures (notice that column index 1 and column index 2 must be reserved for "subject" and "activity" so indexes in keptFeatures have an addition of 2)
+- Subset combinedData, kept features columns is defined in keptFeatures (notice that column index 1 and column index 2 must be reserved for "subject" and "activity" so indexes in keptFeatures have an addition of 2)
 
 ####Uses descriptive activity names to name the activities in the data set
 - Read desriptive name of activity from "activity_labels.txt" to activityLabels
@@ -78,7 +78,8 @@ Data splits into 3 files. Before making a combined data set include test and tra
 
 ####Appropriately labels the data set with descriptive variable names.
 - Feature names are used to name the variables (column names). 
-- Column names are refined with make.names to make sure columns have legitimate and unique names. After refined, they are transformed to lower case with dot as identifier (follow R coding convention of Google: http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml). Final column names look like: "t.body.acc.mean.sub.x" 
+- Column names are refined with make.names to make sure columns have legitimate and unique names. After refined, they are transformed to lower case with dot as identifier (follow R coding convention of Google: http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml). "..." and  ".." are removed and "body.body" is replaced with "body".
+
 
 ####Create a second, independent tidy data set with the average of each variable for each activity and each subject
 There is not missing value in the data set. Also column names have already refined in the last step.   
