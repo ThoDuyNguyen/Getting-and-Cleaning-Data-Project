@@ -85,6 +85,6 @@ meanData <- combinedData %>%
     summarise_each(funs(mean))
 
 ## Tidy the data frame
-tidyData <- gather(meanData, feature, value, -subject, -activity)
+tidyData <- gather(meanData, feature, mean.value, -subject, -activity)
 
 write.table(tidyData,  row.name=FALSE, file = "tidyData.txt")
