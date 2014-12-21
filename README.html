@@ -141,7 +141,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h4>Appropriately labels the data set with descriptive variable names.</h4>
 <ul>
 <li>Feature names are used to name the variables (column names).</li>
-<li>Column names are refined with make.names to make sure columns have legitimate and unique names. After refined, they are transformed to lower case with dot as identifier (follow R coding convention of Google: <a href="http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml">http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml</a>). “…” and “..” are removed and “body.body” is replaced with “body”</li>
+<li>Column names are refined with make.names to make sure columns have legitimate and unique names. After refined, they are transformed to lower case with dot as identifier (follow R coding convention of Google: <a href="http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml">http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml</a>). “…” and “..” are removed and “body.body” is replaced with “body”.</li>
 </ul>
 </div>
 <div id="create-a-second-independent-tidy-data-set-with-the-average-of-each-variable-for-each-activity-and-each-subject" class="section level4">
@@ -153,7 +153,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 <div id="make-tidy-data" class="section level5">
 <h5>Make tidy data</h5>
-<p>All feature variables are normalized, floating value bounded within [-1,1] and unit-free. Therefore, we could combine all faeture vectors into 1 vector. On the other hand, there is not any specific requirement for this tidy set. Long format is choosed for this data set. This tidy data set contains 4 columns: - subject : id of the participant - activity : activity to be measured - feature : feature to be measure - mean.value : mean value feature calculate in the next step. We use “gather” function from tidyr package to tidy data set.</p>
+<p>All feature variables are normalized, floating value bounded within [-1,1] and unit-free. Therefore, we could combine all faeture vectors into 1 vector. On the other hand, there is not any specific requirement for this tidy set. Long format is choosed for this data set. This tidy data set contains 4 columns: - subject : id of the participant - activity : activity to be measured - feature : feature to be measure - mean.value : mean value feature calculate in the last step. We use “gather” function from tidyr package to tidy data set.</p>
 </div>
 </div>
 <div id="code-book" class="section level3">

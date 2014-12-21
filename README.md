@@ -93,7 +93,7 @@ This tidy data set contains 4 columns:
 - subject : id of the participant
 - activity : activity to be measured
 - feature : feature to be measure
-- mean.value : mean value feature calculate in the next step. 
+- mean.value : mean value feature calculate in the last step. 
 We use "gather" function from tidyr package to tidy data set. 
 
 ###Code book
